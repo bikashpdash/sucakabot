@@ -27,6 +27,7 @@ class WebcontentItem(scrapy.Item):
     links=scrapy.Field()
 
 class XmlfeedItem(scrapy.Item):
+    guid=scrapy.Field()
     title=scrapy.Field()
     description=scrapy.Field()
     link=scrapy.Field()

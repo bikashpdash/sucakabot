@@ -9,6 +9,8 @@ from itemadapter import ItemAdapter
 import json  
 import os
 
+appdir=os.environ['HOME']+'/sucaka'
+
 class SucakabotPipeline:
     def process_item(self, item, spider):
         return item
@@ -16,11 +18,12 @@ class SucakabotPipeline:
 
 
 class JsonWriterPipeline:
+    
     def open_spider(self, spider):
-        if not os.path.exists('cache') :
-            os.makedirs("cache")
+        if not os.path.exists(appdir) :
+            os.makedirs(appdir)
         
-        self.file = open('cache/items.jl', 'w')
+        self.file = open(appdir+'/items.jl', 'w')
     def close_spider(self, spider):
         self.file.close()
     def process_item(self, item, spider):

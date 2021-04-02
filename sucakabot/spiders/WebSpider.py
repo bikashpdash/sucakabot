@@ -11,7 +11,8 @@ class WebSpider(scrapy.Spider):
         'http://quotes.toscrape.com/page/2/',
         'http://quotes.toscrape.com/page/3/',
         'https://www.w3schools.com/tags/tag_object.asp'
-        ]        
+        ]
+        
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
         

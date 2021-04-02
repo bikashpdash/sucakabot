@@ -7,7 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Sucaka BOT'
+BOT_NAME = 'Test BOT'
 
 SPIDER_MODULES = ['sucakabot.spiders']
 NEWSPIDER_MODULE = 'sucakabot.spiders'
